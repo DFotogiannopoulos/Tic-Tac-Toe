@@ -1,4 +1,4 @@
-# Tic-Tac-Tote
+# Tic-Tac-Toe
 
 ## Brief description
 This is a mini game a created with vanilla JS to practice my skills with this language. I implemented the classic 
@@ -13,6 +13,7 @@ Tic-Tac-Toe game.
 2) Javascript
 
 ## Screenshot:
+<img width="1900" height="900" alt="image" src="https://github.com/user-attachments/assets/fa0a816c-23d4-4597-8220-e8d6c33f9799" />
 
 
 ## Author:
