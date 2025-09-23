@@ -89,7 +89,7 @@ input{
     display: grid;
     grid-template-columns: auto auto auto;
     color: aliceblue;
-    margin-top: 25vh;
+    margin-top: 5em;
     width: 30%;
     height:20%;
     opacity: 0;
@@ -136,7 +136,7 @@ input{
 #turn{
     color: rgb(44, 155, 196);
     font-family: spacey-font;
-    margin: auto;
+    margin: auto auto 1em auto;
     text-align: center;
     height:10px;
     font-size: xx-large;
@@ -154,4 +154,25 @@ input{
 
 footer > p {
     padding-top: 2%;
+}
+
+.new-game-btn{
+    font-family: spacey-font;
+    display: block;
+    margin: auto;
+    width:25%;
+    height: 4vw;
+    border-radius: 13%;
+    display: block;
+    transition: all .5s ease-in-out;
+    cursor:pointer;
+    margin-top: 2rem;
+}
+
+.new-game-btn:hover{
+    transform: scale(1.2);
+}
+
+.hide-propety{
+    display: none;
 }

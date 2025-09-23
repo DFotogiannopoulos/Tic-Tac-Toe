@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    const restartButton = document.getElementById("restart");
     const turn = document.getElementById("turn");
+    const gameGrid = document.getElementById("game-grid");
 
     const name1 = localStorage.getItem("player1");
     const name2 = localStorage.getItem("player2");
@@ -8,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     turn.innerHTML = "<p>" + name1 + " plays!" + "</p>";
 
     const cells = document.getElementsByClassName("cell");
+
+    restartButton.addEventListener("click", function() {
+        window.location.href="index.html";
+    });
 
     let symbol = "X";
     Array.from(cells).forEach(cell => {
@@ -21,10 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(check);
                 if (check == name1){
                     turn.innerHTML = "<p>" + name1 + " wins!" + "</p>";
+                    localStorage.clear();
+                    Array.from(cells).forEach(cell => cell.style.pointerEvents = "none");
                 }else if (check == name2){
                     turn.innerHTML = "<p>" + name2 + " wins!" + "</p>";
+                    localStorage.clear();
+                    Array.from(cells).forEach(cell => cell.style.pointerEvents = "none");
                 }else if(check == "Tie"){
                     turn.innerHTML = "<p>It was a boring tie...</p>";
+                    localStorage.clear();
+                    Array.from(cells).forEach(cell => cell.style.pointerEvents = "none");
                 }else{
                     if (symbol == "X"){
                         symbol = "O";
