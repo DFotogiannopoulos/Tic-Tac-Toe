@@ -1,0 +1,178 @@
+#logo{
+    height: 40vh;
+    width: 30vw;
+    margin:auto;
+    margin-top: 9vh;
+    display: block;
+    border-radius: 3%;
+    position: relative;
+    top: 10%;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(32, 11, 52);
+    margin:0;
+    padding: 0;
+}
+
+main{
+    flex: 1;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    color: rgb(164, 161, 161);
+    background-color: rgb(56, 30, 79);
+    width: 100%;
+    height:10%;
+    
+}
+
+.inputs{
+    margin-top: 25vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    justify-content: space-around;
+    gap:4vw;
+}
+
+.name{
+    display: flex;
+    gap:0.8vw;
+    
+}
+
+label{
+    color: rgb(44, 155, 196);
+    font-size: larger;
+    font-family: spacey-font;
+}
+
+@font-face {
+    font-family: spacey-font;
+    src: url(font/SupremeSpike-KVO8D.otf);
+}
+
+input{
+    background-color: gray;
+    height: 100%;
+    font-size: 1em;
+    
+}
+
+.start-btn{
+    font-family: spacey-font;
+    width:15%;
+    height: 4vw;
+    border-radius: 13%;
+    margin: auto;
+    display: block;
+    margin-top: 3vh;
+    transition: all .5s ease-in-out;
+    cursor:pointer;
+}
+
+.start-btn:hover{
+    transform: scale(1.2);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: aliceblue;
+    margin-top: 5em;
+    width: 30%;
+    height:20%;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleInGrid 1s ease-out forwards;
+}
+
+@keyframes scaleInGrid {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.cell{
+   box-sizing: border-box;
+   padding: 0;                          
+   font-size: 4rem;
+   font-family: spacey-font; 
+   color:rgb(5, 49, 153);                 
+   border: 5px solid rgb(44, 155, 196);
+   width: 180px;                          
+   height: 180px;                         
+   display: flex;                        
+   align-items: center;                  
+   justify-content: flex-end; 
+   cursor: pointer;
+}
+
+.cell::after {
+  content: attr(data-mark);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  font-size: 4rem;
+  visibility: hidden;
+}
+
+.cell.show::after {
+  opacity: 1;
+}
+
+#turn{
+    color: rgb(44, 155, 196);
+    font-family: spacey-font;
+    margin: auto auto 1em auto;
+    text-align: center;
+    height:10px;
+    font-size: xx-large;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleInGrid 1s ease-out forwards;
+}
+
+@keyframes scaleInGrid {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+footer > p {
+    padding-top: 2%;
+}
+
+.new-game-btn{
+    font-family: spacey-font;
+    display: block;
+    margin: auto;
+    width:25%;
+    height: 4vw;
+    border-radius: 13%;
+    display: block;
+    transition: all .5s ease-in-out;
+    cursor:pointer;
+    margin-top: 2rem;
+}
+
+.new-game-btn:hover{
+    transform: scale(1.2);
+}
+
+.hide-propety{
+    display: none;
+}
